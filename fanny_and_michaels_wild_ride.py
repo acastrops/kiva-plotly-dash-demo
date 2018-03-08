@@ -25,3 +25,11 @@ mask = (df_clean['borrower_genders'].str.len() <= 6)
 
 df_clean = df_clean.loc[mask]
 
+
+
+df_clean['borrower_genders'].replace('female',1, inplace=True)
+df_clean['borrower_genders'].replace('male',0, inplace=True)
+
+df_clean.groupby(['country'])[['borrower_genders']].sum()
+
+df_clean['country'].value_counts()
