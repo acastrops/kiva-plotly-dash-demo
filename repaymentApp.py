@@ -15,7 +15,7 @@ import plotly.graph_objs as go
 import numpy as np
 
 # Import your dataframe from a csv with pandas
-df = pd.read_csv('data/kiva_loans.csv')
+df = pd.read_csv('data/kiva_loans.csv.gz', compression='gzip')
 
 ##### Beau graphs
 # subset for important columns
@@ -30,10 +30,33 @@ a = Beau_df.sample(5000)
 
 # len(kiva.activity.unique()) #shows there are 163 unique activities
 
-repayment_df = df[['repayment_interval', 'sector', 'borrower_genders', 'activity', 'country']]
-top5 = repayment_df.groupby('sector').size().sort_values(ascending=False)[
-       0:5]  # lets look at top 5
+repayment_df = df[['repayment_interval', 'sector', 'borrower_genders']]
 
+# drop any rows with any null values
+repayment_df = repayment_df.dropna()
+
+# filter rows of interest
+repayment_df = repayment_df[repayment_df.repayment_interval == "irregular"] 
+
+def classify_gender(row):
+    genders = row['borrower_genders'].split(',')
+    num_males = genders.count('male')
+    num_females = genders.count('female')
+    if num_males > 0 and num_females > 0:
+        return 'both'
+    else:
+        return genders[0].lower()
+
+# mutate, create a new variable which is 'male', 'female', or 'both' for borrower gender
+repayment_df['major_gender'] = repayment_df.apply(classify_gender, axis=1)  # apply function to each row
+
+# Split dataframe based on gender
+top_sectors_male = repayment_df[repayment_df.major_gender == "male"]
+top_sectors_female = repayment_df[repayment_df.major_gender == "female"]
+
+# For each gender, find the top 5 sectors by count
+top_sectors_male = top_sectors_male.groupby('sector').size().sort_values(ascending=False)[0:5]
+top_sectors_female = top_sectors_female.groupby('sector').size().sort_values(ascending=False)[0:5]
 
 ######## /Beau graphs
 
@@ -103,7 +126,7 @@ app.layout = html.Div(className='container', children=[
     ]),
     html.Div(dcc.Graph(id='graph'), className='ten columns'),
     html.H1(
-        children='Top 5 activities for loans',
+        children='Top 5 sectors for irregular payments',
         style={
             'textAlign': 'center',  # center the header
             'color': '#7F7F7F'
@@ -115,15 +138,15 @@ app.layout = html.Div(className='container', children=[
         figure={
             'data': [
                 {
-                    'x': top5.index,
-                    'y': top5,
+                    'x': top_sectors_male.index,
+                    'y': top_sectors_male,
                     'type': 'bar',
                     'opacity': .6,  # changes the bar chart's opacity
                     'name': 'Male'
                 },
                 {
-                    'x': top5.index,
-                    'y': top5,
+                    'x': top_sectors_female.index,
+                    'y': top_sectors_female,
                     'type': 'bar',
                     'opacity': .6,  # changes the bar chart's opacity
                     'name': 'Female'
