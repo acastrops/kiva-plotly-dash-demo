@@ -15,7 +15,7 @@ import plotly.graph_objs as go
 import numpy as np
 
 # Import your dataframe from a csv with pandas
-df = pd.read_csv('data/kiva_loans.csv')
+df = pd.read_csv('data/kiva_loans.csv.gz', compression='gzip')
 
 ##### Beau graphs
 # subset for important columns
