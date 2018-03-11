@@ -4,14 +4,10 @@ import dash_html_components as html
 import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
-from kiva_data_loaders import *
 
-
-loans_data = pd.read_csv('kiva_loans.csv')
-
+df = pd.read_csv('data/kiva_loans.csv.gz', compression='gzip')
 
 app = dash.Dash()
-
 
 app.layout = html.Div([
     dcc.Graph(id='graph-with-slider', animate='true'),
@@ -25,6 +21,24 @@ app.layout = html.Div([
     )
 ])
 
+app.layout = html.Div([
+    html.H1('Heads!'),
+    dcc.Graph(id='graph-with-slider'),
+    html.H3('Age',
+        style={
+            'textAlign': 'center'
+        }
+    ),
+    dcc.RadioItems(
+        id='year-picker',
+        options=[
+            {'label': '1', 'value': df['age'].min()},
+            {'label': '2', 'value': df['age'].max()}
+        ],
+        value=1,
+        style={'textAlign':'center'}
+    )
+])
 
 @app.callback(
     dash.dependencies.Output('graph-with-slider', 'figure'),

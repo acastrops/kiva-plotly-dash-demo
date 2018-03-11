@@ -17,6 +17,10 @@ import numpy as np
 # Import your dataframe from a csv with pandas
 df = pd.read_csv('data/kiva_loans.csv.gz', compression='gzip')
 
+df['male'] = df['borrower_genders'].contains('\bmale', case=False)
+
+df['female'] = df['borrower_genders'].contains('female', case=False)
+
 ##### Beau graphs
 # subset for important columns
 """df = df[['term_in_months', 'loan_amount', 'lender_count', 'funded_amount',
@@ -265,8 +269,8 @@ def update_figure(selected_year):
         font=dict(family='Courier New, monospace', size=18, color='#7f7f7f'),
         geo={'showframe': False}  # hide frame around map
     )
-    cloropleth_map_fig = {'data': data, 'layout': layout}
-    return cloropleth_map_fig
+    choropleth_map_fig = {'data': data, 'layout': layout}
+    return choropleth_map_fig
 
 # Joe scatter-plot
 @app.callback(
