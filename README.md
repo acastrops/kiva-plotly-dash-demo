@@ -9,8 +9,10 @@
 
 # Details
 
-Team members:  
-David, Fanny, Mike, Noah, and Adriana. We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
+**Team members:**     
+David, Fanny, Mike, Noah, and Adriana. 
+
+We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
 
 # Screenshot
 
@@ -24,8 +26,8 @@ David, Fanny, Mike, Noah, and Adriana. We will include the questions and brief s
 
 We made several different graphs. David worked on the choropleth; Fanny, and Mike worked on comparing gender and loans; Noah and Adriana created the bar graph. 
 
-# Bar graph
-We were drawn to the information about 
+# Bar graph  
+We were interested in the characteristics of irregular payments. Perhaps there is a differnce between irregular payments between male and females borrowers. Note that food and retail are among the highest sectors with the highest quantity of irregular payments. Aside from the agricultural sector, there was not a significant difference between aggregate irregular payment totals between male and female borrowers.  
 
 # Map 
 
