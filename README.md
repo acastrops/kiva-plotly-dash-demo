@@ -40,8 +40,7 @@ This interactive graph allows users to explore fund amounts in several dimension
 In our screenshot for Mongolia, note how the funded amounts consistently rank between 0 and 4k throught the years with data (2014 and 2015). This interactive scatterplot allows us to see large disparities between male and female loans throughout the years. For example: in India, there are significantly less orange dots compared to blue dots. This means there are comparatively more loans made to females than loans made to males throught the years.    
 
 # Map  
-The choropoleth map allows us to see which regions or countries disproportionately offer loans to females compared to males. We are able to confirm previous observations that India makes more loans to females than males.  
-
+The choropoleth map allows us to see which regions or countries disproportionately offer loans to females compared to males. We are able to confirm previous observations that India makes more loans to females than males. The map allows us to quickly identify countries with over 75% percent of loans made to females through the years, such as Madagascar, Indonesia, and Brazil.      
 
 
 # Resources
