@@ -9,13 +9,20 @@
 
 # Details
 
-Team members: David Fanny, Mike, Noah, and Adriana. We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
+Team members:  
+David, Fanny, Mike, Noah, and Adriana. We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
 
 # Screenshot
 
-(include screenshot here)
+![top 5 sectors](img/top5sectors.png)  
 
-We made # different graphs. David worked on the choropleth; Fanny, and Mike worked on (...); Noah and Adriana created the bar graph. 
+
+![gender funds over time](img/genderFundsOverTime.png)  
+
+![percent Female Loans Choropleth](img/percentFemaleLoansChoropleth.png)  
+
+
+We made several different graphs. David worked on the choropleth; Fanny, and Mike worked on comparing gender and loans; Noah and Adriana created the bar graph. 
 
 # Bar graph
 We were drawn to the information about 
