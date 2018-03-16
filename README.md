@@ -1,11 +1,27 @@
 # kiva-plotly-dash-demo
 
 # Canvas submission expectations
-* functioning Dash code
-* a screenshot of your Dash
-* a file with a list of team members, questions you chose to answer with your visualizations
-* 2-3 different types of graphs per group
-* turn in by Friday of next week, after midterms
+* Functioning Dash code.
+* A screenshot of your Dash.
+* A file with a list of team members, questions you chose to answer with your visualizations.
+* 2-3 different types of graphs per group.
+* Turn in by Friday of next week, after midterms.
+
+# Details
+
+Team members: David Fanny, Mike, Noah, and Adriana. We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
+
+# Screenshot
+
+(include screenshot here)
+
+We made # different graphs. David worked on the choropleth; Fanny, and Mike worked on (...); Noah and Adriana created the bar graph. 
+
+# Bar graph
+We were drawn to the information about 
+
+# Map 
+
 
 # Resources
 Dash repositories from last week's lecture:
