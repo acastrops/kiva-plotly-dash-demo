@@ -10,24 +10,28 @@
 # Details
 
 **Team members:**     
-David, Fanny, Mike, Noah, and Adriana. 
+David, Fanny, Mike, Noah, and Adriana   
 
 We will include the questions and brief sentences about our visualizations in this README. The app can be found above, it is named `app.py`. For brevity, below is a screenshot of our app:
 
-# Screenshot
+# Screenshots  
 
+### Top 5 Sectors for Irregular Payments by Gender  
 ![top 5 sectors](img/top5sectors.png)  
 
-
+## Fund Amounts Over Time by Gender  
 ![gender funds over time](img/genderFundsOverTime.png)  
 
+## Percent Loans Awarded to Females by Country  
 ![percent Female Loans Choropleth](img/percentFemaleLoansChoropleth.png)  
 
 
 We made several different graphs. David worked on the choropleth; Fanny, and Mike worked on comparing gender and loans; Noah and Adriana created the bar graph. 
 
-# Bar graph  
+# Bar graph    
 We were interested in the characteristics of irregular payments. Perhaps there is a differnce between irregular payments between male and females borrowers. Note that food and retail are among the highest sectors with the highest quantity of irregular payments. Aside from the agricultural sector, there was not a significant difference between aggregate irregular payment totals between male and female borrowers.  
+
+# 
 
 # Map 
 
