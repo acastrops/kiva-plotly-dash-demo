@@ -33,12 +33,15 @@ We will include the questions and brief sentences about our visualizations in th
 We were interested in the characteristics of irregular payments. Perhaps there is a differnce between irregular payments between male and females borrowers. Note that food and retail are among the highest sectors with the highest quantity of irregular payments. Aside from the agricultural sector, there was not a significant difference between aggregate irregular payment totals between male and female borrowers.  
 
 # Scatterplot  
-This interactive graph allows users to explore fund amounts in several dimensions. You can select the: 
-    *  country of interest (ie. Mongolia, Saudia Arabia, Mali, etc.)  
-    *  the year of interest (years between 2014 and 2017)  
- In our screenshot for Mongolia, note how the funded amounts consistently rank between 0 and 4k throught the years with data (2014 and 2015). This interactive scatterplot allows us to see large disparities between male and female loans throughout the years. For example: in India, there are significantly less orange dots compared to blue dots. This means there are comparatively more female loans than loans made to males throught the years.  
+This interactive graph allows users to explore fund amounts in several dimensions. You can select the:  
+* country of interest (ie. Mongolia, Saudia Arabia, Mali, etc.)    
+* the year of interest (years between 2014 and 2017)   
 
-# Map 
+In our screenshot for Mongolia, note how the funded amounts consistently rank between 0 and 4k throught the years with data (2014 and 2015). This interactive scatterplot allows us to see large disparities between male and female loans throughout the years. For example: in India, there are significantly less orange dots compared to blue dots. This means there are comparatively more loans made to females than loans made to males throught the years.    
+
+# Map  
+The choropoleth map allows us to see which regions or countries disproportionately offer loans to females compared to males. We are able to confirm previous observations that India makes more loans to females than males.  
+
 
 
 # Resources
